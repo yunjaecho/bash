@@ -25,11 +25,11 @@ fi
 ping -c 1 $HOST
 RETURN_CODE=$?
 
-if [ "RETURN_CODE" -ne "0" ]
+if [ "$RETURN_CODE" -ne "0" ]
 then
     echo "$HOST unreachable"
 fi
 
 #==================================
-ping -c i $HOST && echo "$HOST reachable."
+ping -c 1 $HOST && echo "$HOST reachable."
 
